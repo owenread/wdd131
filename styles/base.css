@@ -1,14 +1,21 @@
+:root {
+    --primary-color: #9823ac;
+    --nav-color: #101010;
+    --background-color: #eee;
+    --card-color: #ffffff;
+    --text-light: #ffffff;
+}
+
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     margin: 0;
-    background-color: #eee;
+    background-color: var(--background-color);
 }
 
-
 header {
-    background-color: #9823ac;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-light);
     text-align: center;
 }
 
@@ -21,19 +28,19 @@ header {
 nav {
     display: flex;
     justify-content: space-around;
-    background-color: #101010;
+    background-color: var(--nav-color);
     padding: 10px;
 }
 
 nav a {
-    color: white;
+    color: var(--text-light);
     text-decoration: none;
 }
 
 nav a:hover {
     text-decoration: underline;
+    color: #d9a6e3;
 }
-
 
 main {
     max-width: 1000px;
@@ -47,30 +54,27 @@ h1 {
     margin-bottom: 20px;
 }
 
-
 .card-container {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 20px;
 }
 
-
 .card {
-    background: white;
+    background: var(--card-color);
     border-radius: 8px;
     padding: 15px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .card h2 {
-    background: #9823ac;
-    color: white;
+    background: var(--primary-color);
+    color: var(--text-light);
     padding: 10px;
     margin: -15px -15px 15px -15px;
     border-radius: 8px 8px 0 0;
     text-align: center;
 }
-
 
 .about-content {
     display: flex;
@@ -80,7 +84,6 @@ h1 {
 .about-content img {
     width: 300px;
 }
-
 
 .location {
     display: flex;
@@ -92,10 +95,9 @@ h1 {
     width: 200px;
 }
 
-
 footer {
-    background: #9823ac;
-    color: white;
+    background: var(--primary-color);
+    color: var(--text-light);
     text-align: center;
     padding: 15px;
 }
