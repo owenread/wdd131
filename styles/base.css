@@ -88,8 +88,16 @@ h3 {
     gap: 15px;
 }
 
+.location img {
+    width: 180px;
+    height: auto;
+    align-self: flex-start;
+}
+
 .about-content img {
     width: 300px;
+    height: auto;
+    align-self: flex-start;
 }
 
 .location {
@@ -98,8 +106,9 @@ h3 {
     margin-top: 10px;
 }
 
-.location img {
-    width: 200px;
+
+.card ul li {
+    margin-bottom: 10px;
 }
 
 footer {

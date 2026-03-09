@@ -37,4 +37,4 @@ def smart_resize(input_path, output_path, max_kb=125, min_quality=20, reduction_
             quality = 95  # reset quality after resizing
 
 # Example usage
-smart_resize("largehero.jpg", "hero2.jpg", max_kb=125)
+smart_resize("profileworking.jpg", "profile2.jpg", max_kb=125)
