@@ -31,6 +31,7 @@ main {
     background: rgb(233, 234, 252);
     padding: 2rem;
     grid-column: 3 / 4;
+    
 }
 
 footer {
