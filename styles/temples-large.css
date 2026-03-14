@@ -5,8 +5,12 @@
     }
 
     nav {
+        display: flex;
         flex-direction: row;
-        justify-content: center;
+    }
+
+    nav.hide {
+        display: flex;
     }
 
     nav a {
