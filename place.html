@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Discover the United States of America - its culture, geography, and weather." />
+    <title>USA | Discover America | Owen Read</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles/place.css" />
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-inner">
+            <h1>United States</h1>
+            <p class="tagline">Land of the Free &amp; Home of the Brave</p>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <picture>
+                <source media="(min-width: 768px)" srcset="images/usa-hero-large.webp" />
+                <img src="images/usa-hero-small.webp" alt="Iconic American landscape with mountains and open skies"
+                    class="hero-img" width="800" height="500" loading="eager" />
+            </picture>
+        </section>
+
+        <!-- Info Grid -->
+        <section class="info-grid">
+
+            <!-- About -->
+            <div class="card" id="about">
+                <h2>About</h2>
+                <p>The United States of America is a vast nation spanning 50 states, covering nearly 3.8 million square
+                    miles. From the rocky coasts of Maine to the sun-soaked beaches of Hawaii, America offers an
+                    unmatched diversity of landscapes, cultures, and experiences.</p>
+                <p>Founded in 1776, the U.S. is a federal republic known for its cultural influence, economic power, and
+                    spirit of innovation.</p>
+            </div>
+
+            <!-- Gallery -->
+            <div class="card" id="gallery">
+                <h2>Gallery</h2>
+                <div class="gallery-grid">
+                    <img src="images/usa-photo1.webp" alt="Grand Canyon at sunset" loading="lazy" />
+                    <img src="images/usa-photo2.webp" alt="New York City skyline" loading="lazy" />
+                    <img src="images/usa-photo3.webp" alt="Yellowstone National Park" loading="lazy" />
+                </div>
+            </div>
+
+            <!-- Facts -->
+            <div class="card" id="facts">
+                <h2>Quick Facts</h2>
+                <dl>
+                    <dt>Capital</dt>
+                    <dd>Washington, D.C.</dd>
+                    <dt>Population</dt>
+                    <dd>~335 million</dd>
+                    <dt>Area</dt>
+                    <dd>3.8 million mi²</dd>
+                    <dt>Language</dt>
+                    <dd>English</dd>
+                    <dt>Currency</dt>
+                    <dd>US Dollar (USD)</dd>
+                    <dt>Time Zones</dt>
+                    <dd>6 (EST to HST)</dd>
+                </dl>
+            </div>
+
+            <!-- Weather -->
+            <div class="card" id="weather">
+                <h2>Weather</h2>
+                <div class="weather-icon-mobile">
+                    <img src="images/partly-cloudy.svg" alt="Partly cloudy weather icon" width="64" height="64" />
+                </div>
+                <div class="weather-details">
+                    <p><strong>Location:</strong> Washington, D.C.</p>
+                    <p><strong>Temperature:</strong> <span id="temperature">45</span>°F</p>
+                    <p><strong>Wind Speed:</strong> <span id="wind-speed">10</span> mph</p>
+                    <p><strong>Conditions:</strong> Partly Cloudy</p>
+                    <p><strong>Wind Chill:</strong> <span id="wind-chill">--</span></p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+    
+        <p>
+            © <span id="currentyear"></span> 🏔️ Owen Read 🏔️ Utah
+        </p>
+    
+        <p id="lastModified"></p>
+    
+    </footer>
+
+</body>
+
+</html>
