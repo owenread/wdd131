@@ -25,7 +25,7 @@ header {
 }
 
 nav {
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
@@ -39,8 +39,8 @@ nav a:hover {
     background: #34495e;
 }
 
-nav.hide {
-    display: none;
+nav.open {
+    display: flex;
 }
 
 main {
@@ -50,6 +50,11 @@ main {
 }
 
 h1 {
+    text-align: center;
+}
+
+h2 {
+    flex: 1;
     text-align: center;
 }
 .container {

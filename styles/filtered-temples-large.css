@@ -1,0 +1,20 @@
+@media (min-width: 700px) {
+
+    #menu {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav a {
+        padding: 1rem;
+    }
+
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
