@@ -9,6 +9,10 @@
         flex-direction: row;
     }
 
+    nav.hide {
+        display: flex;
+    }
+
     nav a {
         padding: 1rem;
     }
