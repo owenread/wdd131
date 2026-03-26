@@ -91,7 +91,7 @@ const temples = [
     },
     {
         templeName: "Mount Timpanogos Utah",
-        location: "American Fork, Utah, Italy",
+        location: "American Fork, Utah",
         dedicated: "1996, October, 13-19",
         area: 41010,
         imageUrl:
