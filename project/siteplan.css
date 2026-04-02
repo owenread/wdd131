@@ -1,6 +1,4 @@
-/* GOOGLE FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap');
-
+/* Getting better at putting comments into my code */
 /* VARIABLES */
 :root {
     --yellow: #FFD93D;
@@ -86,7 +84,7 @@ section {
     margin-bottom: 1.5rem;
 }
 
-/* LOGO - Will design one later but for right now I will use a css version*/
+/* LOGO */
 .logo {
     display: inline-block;
     background-color: var(--coral);
@@ -98,7 +96,7 @@ section {
     margin-bottom: 0.8rem;
 }
 
-/* COLOR SWATCHES */
+/* COLOR SCHEMA */
 .color-swatches {
     display: flex;
     flex-wrap: wrap;
