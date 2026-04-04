@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Product Review Form - Owen Michael Read</title>
+    <meta name="author" content="Owen Read">
+    <meta name="description" content="Product review form">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html">
+
+            <div class="field-group">
+                <label for="product">Product Name</label>
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                </select>
+            </div>
+
+            <div class="field-group">
+                <fieldset>
+                    <legend>Overall Rating</legend>
+                    <div class="stars">
+                        <div class="star-option">
+                            <label for="r1">☆</label>
+                            <input type="radio" id="r1" name="rating" value="1" required>
+                        </div>
+                        <div class="star-option">
+                            <label for="r2">☆☆</label>
+                            <input type="radio" id="r2" name="rating" value="2">
+                        </div>
+                        <div class="star-option">
+                            <label for="r3">☆☆☆</label>
+                            <input type="radio" id="r3" name="rating" value="3">
+                        </div>
+                        <div class="star-option">
+                            <label for="r4">☆☆☆☆</label>
+                            <input type="radio" id="r4" name="rating" value="4">
+                        </div>
+                        <div class="star-option">
+                            <label for="r5">☆☆☆☆☆</label>
+                            <input type="radio" id="r5" name="rating" value="5">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="field-group">
+                <label for="install-date">Date of Installation</label>
+                <input type="date" id="install-date" name="install-date" required>
+            </div>
+
+            <div class="field-group">
+                <fieldset>
+                    <legend>Which features did you find useful? <em>(Check all that apply)</em></legend>
+                    <label><input type="checkbox" name="features" value="durability"> Durability</label>
+                    <label><input type="checkbox" name="features" value="ease-of-use"> Ease of Use</label>
+                    <label><input type="checkbox" name="features" value="performance"> Performance</label>
+                    <label><input type="checkbox" name="features" value="design"> Design</label>
+                </fieldset>
+            </div>
+
+            <div class="field-group">
+                <label for="review">Written Review <span class="optional">(Optional)</span></label>
+                <textarea id="review" name="review" rows="5"></textarea>
+            </div>
+
+            <div class="field-group">
+                <label for="username">Your Name <span class="optional">(Optional)</span></label>
+                <input type="text" id="username" name="username">
+            </div>
+
+            <input type="submit" value="Post Review">
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 | Product Review | WDD 131</p>
+        <p id="last-modified"></p>
+    </footer>
+
+    <script src="scripts/form.js"></script>
+</body>
+
+</html>
