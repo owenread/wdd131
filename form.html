@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 - Product Review Form - Owen Michael Read</title>
     <meta name="author" content="Owen Read">
-    <meta name="description" content="Product review form">
-    <link rel="stylesheet" href="styles/form.css">
+<meta name="description" content="Submit a product review for your recent purchase. Rate your experience, share useful features, and help others make informed decisions.">  
+<link rel="stylesheet" href="styles/form.css">
+<link rel="stylesheet" href="styles/form.css">
+<script src="scripts/form.js" defer></script>
 </head>
 
 <body>
@@ -35,19 +37,19 @@
                         </div>
                         <div class="star-option">
                             <label for="r2">☆☆</label>
-                            <input type="radio" id="r2" name="rating" value="2">
+                            <input type="radio" id="r2" name="rating" value="2" required>
                         </div>
                         <div class="star-option">
                             <label for="r3">☆☆☆</label>
-                            <input type="radio" id="r3" name="rating" value="3">
+                            <input type="radio" id="r3" name="rating" value="3" required>
                         </div>
                         <div class="star-option">
                             <label for="r4">☆☆☆☆</label>
-                            <input type="radio" id="r4" name="rating" value="4">
+                            <input type="radio" id="r4" name="rating" value="4" required>
                         </div>
                         <div class="star-option">
                             <label for="r5">☆☆☆☆☆</label>
-                            <input type="radio" id="r5" name="rating" value="5">
+                            <input type="radio" id="r5" name="rating" value="5" required>
                         </div>
                     </div>
                 </fieldset>
@@ -61,10 +63,10 @@
             <div class="field-group">
                 <fieldset>
                     <legend>Which features did you find useful? <em>(Check all that apply)</em></legend>
-                    <label><input type="checkbox" name="features" value="durability"> Durability</label>
-                    <label><input type="checkbox" name="features" value="ease-of-use"> Ease of Use</label>
-                    <label><input type="checkbox" name="features" value="performance"> Performance</label>
-                    <label><input type="checkbox" name="features" value="design"> Design</label>
+                    <label for="durability"><input type="checkbox" id="durability" name="features" value="durability"> Durability</label>
+                    <label for="ease-of-use"><input type="checkbox" id="ease-of-use" name="features" value="ease-of-use"> Ease of Use</label>
+                    <label for="performance"><input type="checkbox" id="performance" name="features" value="performance"> Performance</label>
+                    <label for="design"><input type="checkbox" id="design" name="features" value="design"> Design</label>
                 </fieldset>
             </div>
 
@@ -88,7 +90,6 @@
         <p id="last-modified"></p>
     </footer>
 
-    <script src="scripts/form.js"></script>
 </body>
 
 </html>

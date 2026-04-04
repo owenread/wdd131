@@ -4,7 +4,6 @@
     --bg: #f5f3ff;
     --card: #ede9fe;
     --text: #1e1b4b;
-    --optional: #5b21b6;
     --border: #c4b5fd;
 }
 
@@ -34,8 +33,6 @@ header {
 main {
     flex: 1;
     padding: 1.5rem;
-    max-width: 600px;
-    margin: 0 auto;
     width: 100%;
 }
 
@@ -60,7 +57,7 @@ label {
 }
 
 .optional {
-    color: var(--optional);
+    color: var(--accent);
     font-weight: normal;
     font-size: 0.85rem;
 }
@@ -94,13 +91,6 @@ fieldset {
 legend {
     font-weight: 600;
     padding: 0 0.3rem;
-}
-
-.stars {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    flex-wrap: wrap;
 }
 
 .stars {
@@ -185,6 +175,7 @@ input[type="submit"]:hover {
 .field-group fieldset:has(input[type="radio"]:checked) {
     border: 3px solid green;
 }
+
 footer {
     background-color: var(--primary);
     color: white;
@@ -193,3 +184,13 @@ footer {
     font-size: 0.85rem;
 }
 
+@media (min-width: 640px) {
+    main {
+        max-width: 600px;
+        margin: 2rem auto;
+    }
+
+    form {
+        padding: 2rem;
+    }
+}
