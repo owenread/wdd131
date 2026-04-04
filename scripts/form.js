@@ -6,7 +6,7 @@ const products = [
     { id: "jj-1969", name: "warp equalizer", averagerating: 5.0 }
 ];
 
-// Populate product dropdown dynamically
+
 const select = document.getElementById("product");
 products.forEach(product => {
     const option = document.createElement("option");
@@ -15,6 +15,6 @@ products.forEach(product => {
     select.appendChild(option);
 });
 
-// Last modified footer
+
 document.getElementById("last-modified").textContent =
     "Last Modified: " + document.lastModified;
