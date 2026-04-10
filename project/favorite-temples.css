@@ -2,6 +2,7 @@
 :root {
     --yellow: #FFD93D;
     --coral: #FF6B6B;
+    --coral-text: #C0392B;
     --navy: #1A1A2E;
     --white: #FFFFFF;
     --light-bg: #FFF8EC;
@@ -176,7 +177,6 @@ main {
     font-style: normal;
 }
 
-
 #suggest {
     background-color: var(--white);
     border-left: 5px solid var(--coral);
@@ -185,7 +185,7 @@ main {
 }
 
 #suggest h2 {
-    color: var(--coral);
+    color: var(--coral-text);
     font-size: 1.4rem;
     margin-bottom: 0.4rem;
 }
@@ -256,7 +256,7 @@ main {
 
 #confirmation-msg {
     font-weight: 700;
-    color: var(--coral);
+    color: var(--coral-text);
     margin-bottom: 0.5rem;
 }
 
