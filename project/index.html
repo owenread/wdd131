@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Favorite Temples - A showcase of our wonderful temples around the world">
+    <meta name="author" content="Owen Read">
+    <title>My Favorite Temples | WDD 131 Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="favorite-temples.css" rel="stylesheet">
+    <script src="favorite-temples.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1> My Favorite Temples</h1>
+        <h2>Hover over a card to learn more</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#gallery" id="home">Home</a></li>
+            <li><a href="#gallery" id="old">Built Before 1900</a></li>
+            <li><a href="#gallery" id="new">Built After 2000</a></li>
+            <li><a href="#gallery" id="large">Large</a></li>
+            <li><a href="#gallery" id="small">Small</a></li>
+            <li><a href="#suggest">Suggest a Temple</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section>
+            <div id="gallery"></div>
+        </section>
+
+        <section id="quote">
+            <blockquote>
+                <p>"Every sincere seeker of Jesus Christ will find Him in the temple. You will feel His mercy. You will
+                    find answers to your most vexing questions. You will better comprehend the joy of His gospel."</p>
+                <cite>— Russell M. Nelson</cite>
+            </blockquote>
+        </section>
+
+        <section id="suggest">
+            <h2>💡 Suggest a Temple</h2>
+            <p>Have a favorite temple you'd like to see added? Let us know!</p>
+            <form id="suggestion-form">
+                <label for="suggestion-name">Your Name*
+                    <input type="text" id="suggestion-name" name="name" placeholder="Your name" required>
+                </label>
+                <label for="suggestion-email">Email*
+                    <input type="email" id="suggestion-email" name="email" placeholder="your@email.com" required>
+                </label>
+                <label for="suggestion-temple">Temple Name*
+                    <input type="text" id="suggestion-temple" name="temple" placeholder="e.g. Provo Utah Temple"
+                        required>
+                </label>
+                <label for="suggestion-location">Temple Location*
+                    <input type="text" id="suggestion-location" name="location" placeholder="e.g. Provo, Utah" required>
+                </label>
+                <label for="suggestion-reason">Why is it your favorite?
+                    <textarea id="suggestion-reason" name="reason" rows="3" placeholder="Tell us why..."></textarea>
+                </label>
+                <button type="submit" id="suggestion-submit">Submit Suggestion</button>
+            </form>
+            <div id="suggestion-confirmation" hidden>
+                <p id="confirmation-msg"></p>
+                <ul id="past-suggestions"></ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        &copy; <span id="year"></span> &bull; My Favorite Temples &bull; Owen Read
+        <br>
+        <small>Last Modified: <span id="lastModified"></span></small>
+    </footer>
+
+</body>
+
+</html>
