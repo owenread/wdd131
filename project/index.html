@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="My Favorite Temples - A showcase of our wonderful temples around the world">
+    <meta name="description" content="My Favorite Temples. A showcase of my favorite beautiful temples of The Church of Jesus Christ of Latter Day Saints">
     <meta name="author" content="Owen Read">
     <title>My Favorite Temples | WDD 131 Project</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,8 +18,8 @@
 <body>
 
     <header>
-        <h1> My Favorite Temples</h1>
-        <h2>Hover over a card to learn more</h2>
+        <h1>🕍 My Favorite Temples</h1>
+        <p>Hover over a card to learn more</p>
     </header>
 
     <nav>
@@ -67,7 +67,8 @@
                 <label for="suggestion-reason">Why is it your favorite?
                     <textarea id="suggestion-reason" name="reason" rows="3" placeholder="Tell us why..."></textarea>
                 </label>
-                <button type="submit" id="suggestion-submit">Submit Suggestion</button>
+                <button type="submit" id="suggestion-submit" aria-label="Submit your temple suggestion">Submit
+                    Suggestion</button>
             </form>
             <div id="suggestion-confirmation" hidden>
                 <p id="confirmation-msg"></p>

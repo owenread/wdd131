@@ -1,196 +1,305 @@
-/* Getting better at putting comments into my code */
-/* VARIABLES */
+
 :root {
     --yellow: #FFD93D;
     --coral: #FF6B6B;
+    --coral-text: #C0392B;
     --navy: #1A1A2E;
     --white: #FFFFFF;
     --light-bg: #FFF8EC;
 }
 
-/* GENERAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Nunito', sans-serif;
     background-color: var(--light-bg);
     color: var(--navy);
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 1rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1,
 h2,
 h3 {
     font-family: 'Fredoka One', cursive;
-    color: var(--coral);
 }
 
 p,
 li {
-    font-size: 1rem;
     line-height: 1.7;
 }
 
-ul {
-    padding-left: 1.5rem;
-}
-
-/* HEADER */
 header {
     background-color: var(--coral);
     color: var(--white);
     text-align: center;
-    padding: 1.5rem;
-    margin-bottom: 1rem;
+    padding: 1.5rem 1rem;
 }
 
 header h1 {
-    color: var(--yellow);
     font-size: 2.5rem;
+    color: var(--yellow);
+    letter-spacing: 2px;
 }
 
-header h2 {
-    color: var(--white);
-    font-size: 1rem;
+header p {
     font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0.9;
+    margin-top: 0.3rem;
+    color: var(--white);
 }
 
-/* NAV */
+/* =====================
+   NAV
+===================== */
 nav {
     background-color: var(--navy);
-    padding: 0.8rem;
+    padding: 0.6rem 1rem;
+}
+
+nav ul {
+    list-style: none;
     display: flex;
     justify-content: center;
     gap: 1.5rem;
     flex-wrap: wrap;
-    margin-bottom: 1.5rem;
 }
 
 nav a {
     color: var(--yellow);
     text-decoration: none;
     font-family: 'Fredoka One', cursive;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
-/* SECTIONS */
-section {
-    background-color: var(--white);
-    border-left: 5px solid var(--coral);
-    padding: 1.2rem 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-/* LOGO */
-.logo {
-    display: inline-block;
-    background-color: var(--coral);
-    color: var(--yellow);
-    font-family: 'Fredoka One', cursive;
-    font-size: 1.5rem;
-    padding: 0.4rem 1rem;
-    border-radius: 8px;
-    margin-bottom: 0.8rem;
-}
-
-/* COLOR SCHEMA */
-.color-swatches {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.swatch {
-    border: 1px solid #ccc;
-    width: 160px;
-}
-
-.swatch-color {
-    height: 60px;
+main {
+    flex: 1;
+    max-width: 1000px;
     width: 100%;
+    margin: 1.5rem auto;
+    padding: 0 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-.swatch-info {
-    padding: 0.5rem;
-    font-size: 0.85rem;
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
 }
 
-.swatch-yellow {
-    background: #FFD93D;
+.card {
+    height: 220px;
+    perspective: 1000px;
+    cursor: pointer;
 }
 
-.swatch-coral {
-    background: #FF6B6B;
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
 }
 
-.swatch-navy {
-    background: #1A1A2E;
+.card:hover .card-inner {
+    transform: rotateY(180deg);
 }
 
-.swatch-white {
-    background: #FFFFFF;
-    border-bottom: 1px solid #eee;
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-/* TYPOGRAPHY EXAMPLES */
-.font-example {
-    background-color: var(--light-bg);
-    padding: 0.8rem 1rem;
-    margin-top: 0.8rem;
-}
-
-.font-label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    color: #888;
-    margin-bottom: 0.3rem;
-}
-
-.font-fredoka {
-    font-family: 'Fredoka One', cursive;
-    font-size: 1.8rem;
-    color: var(--coral);
-}
-
-.font-nunito {
-    font-family: 'Nunito', sans-serif;
-    font-size: 1rem;
-}
-
-.font-note {
-    font-size: 0.8rem;
-    color: #888;
-    margin-top: 0.3rem;
-}
-
-/* WIREFRAME IMAGE */
-.wireframe-box {
-    margin-top: 1rem;
-    border: 1px solid #ccc;
-    padding: 0.5rem;
-    display: inline-block;
-}
-
-.wireframe-box img {
-    max-width: 100%;
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
-/* DOMAIN NOTE */
-.domain-note {
-    margin-top: 0.5rem;
+.card-back {
+    background-color: var(--navy);
+    color: var(--white);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.2rem;
+    gap: 0.4rem;
 }
 
-/* FOOTER */
+.card-back h3 {
+    color: var(--yellow);
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.card-back p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+#quote {
+    background-color: var(--navy);
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+#quote blockquote p {
+    color: var(--white);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 0.8rem;
+}
+
+#quote cite {
+    color: var(--yellow);
+    font-family: 'Fredoka One', cursive;
+    font-size: 1rem;
+    font-style: normal;
+}
+
+#suggest {
+    background-color: var(--white);
+    border-left: 5px solid var(--coral);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+#suggest h2 {
+    color: var(--coral-text);
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+}
+
+#suggest>p {
+    margin-bottom: 1rem;
+}
+
+#suggestion-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+#suggestion-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+#suggestion-form input,
+#suggestion-form textarea {
+    padding: 0.5rem 0.7rem;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.95rem;
+    color: var(--navy);
+    width: 100%;
+}
+
+#suggestion-form input:required,
+#suggestion-form textarea:required {
+    border-right: 6px solid var(--coral);
+}
+
+#suggestion-form input:focus,
+#suggestion-form textarea:focus {
+    outline: none;
+    border-color: var(--coral);
+}
+
+#suggestion-submit {
+    background-color: var(--coral);
+    color: var(--white);
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 6px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: flex-start;
+    letter-spacing: 1px;
+}
+
+#suggestion-submit:hover {
+    background-color: var(--navy);
+}
+
+#suggestion-confirmation {
+    margin-top: 1rem;
+    background-color: var(--light-bg);
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+#confirmation-msg {
+    font-weight: 700;
+    color: var(--coral-text);
+    margin-bottom: 0.5rem;
+}
+
+#past-suggestions {
+    padding-left: 1.2rem;
+    font-size: 0.9rem;
+}
+
+#past-suggestions li {
+    margin-bottom: 0.3rem;
+}
+
 footer {
     background-color: var(--navy);
     color: var(--yellow);
     text-align: center;
     padding: 1rem;
-    margin-top: 2rem;
     font-family: 'Fredoka One', cursive;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+
+footer small {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    #gallery {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        gap: 0.8rem;
+    }
 }
