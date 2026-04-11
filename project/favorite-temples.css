@@ -98,6 +98,11 @@ main {
     gap: 1.5rem;
 }
 
+#gallery-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
 .card {
     height: 220px;
     perspective: 1000px;
